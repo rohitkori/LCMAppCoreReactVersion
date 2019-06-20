@@ -1,0 +1,46 @@
+﻿@model LCMAppCore.ViewModels.LCMViewModel
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>LCM Calculator</h2>
+
+<div id="content"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.0/umd/react.development.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.0/umd/react-dom.development.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
+<script src="@Url.Content("~/js/components.jsx")"></script>
+
+<div class="container">
+    <div class="modal fade" id="addProducer" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">History</h4>
+                </div>
+
+                <div class="modal-body">
+                    <table id="histories" style="width:100%" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Inputs</th>
+                                <th>Algorithm</th>
+                                <th>Time</th>
+                                <th>Space</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

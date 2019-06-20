@@ -1,0 +1,2 @@
+# LCMAppCore
+LCM calculator
