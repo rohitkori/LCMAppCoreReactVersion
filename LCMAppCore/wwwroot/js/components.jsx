@@ -117,8 +117,6 @@
     render() {
         return (
             <form className="LCMForm form-horizontal" onSubmit={this.handleSubmit}>
-               
-
                 <div className="form-group">
                     <label className="control-label col-sm-2" htmlFor="email">Algorithm:</label>
                     <div className="col-sm-10">
